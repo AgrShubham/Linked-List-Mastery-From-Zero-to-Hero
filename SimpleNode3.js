@@ -1,0 +1,23 @@
+class Node{
+    constructor(val){
+        this.value=val;
+        this.next=null;
+    }
+}
+
+const node1=new Node(0);
+const node2=new Node(10);
+const node3=new Node(100);
+const node4=new Node(1000);
+const node5=new Node(10000);
+
+node1.next=node2
+node2.next=node3
+node3.next=node4
+node4.next=node5
+
+let current=node1;
+while(current !== null){
+    console.log(current.value);
+    current= current.next;
+}
